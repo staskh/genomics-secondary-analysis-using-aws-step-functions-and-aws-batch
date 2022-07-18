@@ -80,7 +80,7 @@ cp NIST7035_TAAGGCGA_L001_R1_001.fastq.gz $build_dist_dir/samples/NIST7035_R1_tr
 #wget https://genomics-solutions-shared-assets.s3-us-west-2.amazonaws.com/secondary-analysis/example-files/fastq/NIST7035_R2_trim_samp-0p1.fastq.gz .
 #cp NIST7035_R2_trim_samp-0p1.fastq.gz $build_dist_dir/samples/NIST7035_R2_trim_samp-0p1.fastq.gz
 wget ftp://ftp-trace.ncbi.nih.gov/ReferenceSamples/giab/data/NA12878/Garvan_NA12878_HG001_HiSeq_Exome/NIST7035_TAAGGCGA_L002_R1_001.fastq.gz  .
-cp  NIST7035_TAAGGCGA_L002_R1_001.fastq.gz $build_dist_dir/samples/NIST7035_R2_trim_samp-0p1.fastq.g
+cp  NIST7035_TAAGGCGA_L002_R1_001.fastq.gz $build_dist_dir/samples/NIST7035_R2_trim_samp-0p1.fastq.gz
 
 
 echo "------------------------------------------------------------------------------"
@@ -92,7 +92,7 @@ mkdir -p $bundle_dir
 
 # create the lambda function deployment pacakage for the solution setup
 cd $source_dir/setup/lambda
-pip install -t . crhelper
+pip install -t . crhelper --upgrade
 zip -r $bundle_dir/SetupLambdaBundle.zip .
 
 # package the solution
