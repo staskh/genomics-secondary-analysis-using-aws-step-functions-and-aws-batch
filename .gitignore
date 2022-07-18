@@ -1,0 +1,6 @@
+*.pyc
+*.pyi
+*.gz
+*.zip
+source/setup/lambda/crhelper*
+deployment/global-s3-assets/*
